@@ -853,6 +853,7 @@ section {
     font-size: 16px;
     border-radius: 50px;
     margin: 1rem 0 0 0;
+    cursor: pointer;
 }
 
 .btnContact:hover {
