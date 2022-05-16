@@ -59,6 +59,7 @@ section {
     font-size: 1rem;
     font-family: 'Raleway', sans-serif;
     color: #FDFFA9;
+    transition-duration: .25s;
 }
 
 .seccionesNav li a:hover {
@@ -72,6 +73,7 @@ section {
     margin: 25px;
     padding: 15px;
     border-radius: 50px;
+    transition-duration: .25s;
 }
 
 
@@ -114,6 +116,7 @@ section {
     font-size: 1rem;
     font-family: 'Raleway', sans-serif;
     color: #FDFFA9;
+    transition-duration: .25s;
 }
 
 .seccionesFooter li a:hover {
@@ -136,7 +139,8 @@ section {
     text-decoration: none;
     font-size: 1rem;
     font-family: sans-serif;
-    color: #FDFFA9;;
+    color: #FDFFA9;
+    transition-duration: .25s;
 }
 
 .whatsapp li a:hover {
@@ -173,6 +177,7 @@ section {
     font-size: 1rem;
     font-family: 'Raleway', sans-serif;
     color: #FDFFA9;
+    transition-duration: .25s;
 }
 
 .iconosRedes:hover {
@@ -198,11 +203,13 @@ section {
 .tarjetas {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     padding: 1rem 2rem;
     margin: 1rem;
     border-radius: 15px;
     width: 20%;
+    height: 40vh;
     text-align: center;
     background-color: #7882A4;
     border: solid 2px #484e62;
@@ -219,7 +226,16 @@ section {
     font-size: 1rem;
     font-family: 'Raleway', sans-serif;
     color: #ffffff;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .25s ease-in-out;
 }
+
+.tarjetas:hover p {
+    visibility: visible;
+    opacity: 1;
+}
+
 
 
 
@@ -333,6 +349,7 @@ section {
     font-size: 1rem;
     font-family: 'Raleway', sans-serif;
     color: #FDFFA9;
+    transition-duration: .25s;
 }
 
 .btnNews a:hover {
@@ -341,6 +358,9 @@ section {
     color: #B3541E;
 }
 
+.btnNewsResponsive {
+    display: none;
+}
 
 
 /* Externos */
@@ -359,6 +379,7 @@ section {
     font-size: 1rem;
     font-family: 'Raleway', sans-serif;
     color: #FDFFA9;
+    transition-duration: .25s;
 }
 
 .externos img:hover {
@@ -403,6 +424,10 @@ section {
         width: auto;
     }
 
+    .intro h1 {
+        font-size: 3rem;
+    }
+
     .textIntro {
         width: auto;
     }
@@ -420,6 +445,12 @@ section {
         height: 350px;
     }
 
+    .tarjetas p {
+        visibility: visible;
+        opacity: 1;
+    }
+
+
     /* Informacion de los creadores */
 
     .informacion {
@@ -434,9 +465,11 @@ section {
     }
 
     .imgCreadores {
-        height: 250px;
-        width: 350px;
+        height: 45vh;
+        width: 80vw;
         margin: 25px 0 25px 0;
+        border-radius: 10px;
+        object-fit: cover;
     }
 
     /* noticias */
@@ -447,7 +480,7 @@ section {
         grid-template-columns: 1fr;
         grid-template-areas: 
         "textoNoticias"
-        "btnNews"
+        "btnNewsResponsive"
         "externos"
         ;
         height: fit-content;
@@ -459,17 +492,42 @@ section {
         margin: 0;
     }
 
-    .btnNews {
-        margin: 25px auto;
-        width: 12%;
-        text-align: center;
-    }
-
     .externos {
        flex-wrap: wrap;
        gap: 10px;
        margin: 0 0 15px 0;
     }
+
+    .btnNews {
+        display: none;
+    }
+
+    .btnNewsResponsive {
+        display: inline-flex;
+        background-color: #fa8072;
+        padding: 15px;
+        border-radius: 50px;
+        margin: 25px auto;
+        width: 12%;
+        justify-content: center;
+        text-align: center;
+        grid-area: btnNewsResponsive;
+    }
+
+    .btnNewsResponsive a {
+        text-decoration: none;
+        font-size: 1rem;
+        font-family: 'Raleway', sans-serif;
+        color: #FDFFA9;
+        transition-duration: .25s;
+    }
+
+    .btnNewsResponsive a:hover {
+        transition: 300ms;
+        transition-delay: 75ms;
+        color: #B3541E;
+    }
+
 
     /* video */
 
@@ -546,6 +604,7 @@ section {
         height: 450px;
         width: 650px;
         margin: 25px 0 25px 0;
+        object-fit: cover;
     }
 
     /* noticias */
@@ -727,9 +786,10 @@ section {
     }
 
     .imgBlog { 
-        height: 250px;
-        width: 70%;
+        height: 30vh;
+        width: 70vw;
         margin-bottom: 40px;
+        object-fit: cover;
     }
 
     .blogFinal {
@@ -766,8 +826,9 @@ section {
     }
 
     .imgBlog {
-        height: 325px;
-        width: 60%;
+        height: 40vh;
+        width: 65vw;
+        object-fit: cover;
         margin-bottom: 40px;
     }
 
@@ -936,6 +997,14 @@ section {
     text-decoration: none;
 }
 
+.textNews h2 {
+    transition-duration: .25s;
+}
+
+.textNews p {
+    transition-duration: .25s;
+}
+
 .textNews a h2:hover {
     transition: 300ms;
     transition-delay: 75ms;
@@ -979,6 +1048,7 @@ section {
     font-size: 1rem;
     font-family: 'Raleway', sans-serif;
     color: #ffffff;
+    transition-duration: .25s;
 }
 
 .btnReadMore:hover {
@@ -1067,7 +1137,7 @@ section {
     padding: 1rem 2rem;
     margin: 1rem;
     border-radius: 15px;
-    height: 70vh;
+    height: 97vh;
     width: 20%;
     text-align: center;
     background-color: #7882A4;
@@ -1101,6 +1171,7 @@ section {
 .linkedinTarjetas {
     height: 25px;
     width: 25px;
+    transition-duration: .25s;
 }
 
 .linkedinTarjetas:hover {
@@ -1178,6 +1249,7 @@ section {
 
     .tarjetasIntegrantes {
         width: 30vw;
+        height: 70vh;
     }
 
     .tarjetasIntegrantes p {
@@ -1300,6 +1372,9 @@ section {
 }
 
 @media screen and (max-width:768px) {
+
+    /* formulario */
+
     .contactUsContainer {
         display: grid;
         grid-template-columns: 1fr;
