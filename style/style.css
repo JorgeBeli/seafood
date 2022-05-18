@@ -24,10 +24,16 @@ section {
     top: 0;
     justify-content: space-between;
     align-items: center;
-    background-color: #019267;  /*  */
     background-image: url("../img/navBackground.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    box-sizing: content-box;
+    height: 20vh;
+}
+
+.seccionesNav li {
+    align-items: center;
+    display: grid;
 }
 
 .imgNav {
@@ -40,12 +46,18 @@ section {
     font-size: 1rem;
     font-family: 'Raleway', sans-serif;
     color: #FDFFA9;
+    box-sizing: content-box;
+}
+
+.fa-solid {
+    color: #ffffff;
 }
 
 .seccionesNav {
     display: flex;
     list-style: none;
     gap: 25px;
+    margin: 0;
 }
 
 #toggler, .nav label {
@@ -193,6 +205,7 @@ section {
 
 /* Tarjetas main */
 
+
 .propiedades {
     display: flex;
     justify-content: space-evenly;
@@ -213,6 +226,7 @@ section {
     text-align: center;
     background-color: #7882A4;
     border: solid 2px #484e62;
+    box-sizing: content-box;
 }
 
 .tarjetas h2 {
@@ -238,6 +252,13 @@ section {
 
 
 
+
+/* carousel */
+
+.w-100 {
+    height: 75vh;
+    object-fit: cover;
+}
 
 /* imagenes de las tarjetas */
 
@@ -608,11 +629,34 @@ section {
 
                                                                         /* NEWS */
 
+
 .newsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}          
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+     
+.card {
+    position: static;
+    background-color: #7b7c76;
+    width: 20rem;
+    margin: 0 auto;
+}
+
+.card-body {
+    color: #fff;
+}
+
+.card-body p {
+    color: #e0e0e0;
+}
+
+.btn-primary {
+    --bs-btn-bg: #fa8072;
+    --bs-btn-border-color: #fa8072;
+    --bs-btn-hover-bg: #fa8072;
+    --bs-btn-hover-border-color: #fff;
+}
 
 .news {
     display: flex;
@@ -1163,9 +1207,8 @@ section {
     /* news */
 
     .newsContainer {
-        display: flex;
-        align-items: center;
-        justify-items: center;
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
     .news {
@@ -1267,6 +1310,13 @@ section {
         object-fit: cover;
     }
 
+    /* tarjetas */
+
+    .tarjetas p {
+        visibility: visible;
+        opacity: 1;
+    }
+
     /* noticias */
 
     .noticias {
@@ -1362,9 +1412,12 @@ section {
     /* news */
 
     .newsContainer {
-        display: flex;
-        align-items: center;
-        justify-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        width: 21rem;
     }
 
     .news {
