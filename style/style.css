@@ -28,7 +28,6 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     box-sizing: content-box;
-    height: 20vh;
 }
 
 .seccionesNav li {
@@ -250,16 +249,6 @@ section {
     opacity: 1;
 }
 
-
-
-
-/* carousel */
-
-.w-100 {
-    height: 75vh;
-    object-fit: cover;
-}
-
 /* imagenes de las tarjetas */
 
 .imgTarjetas {
@@ -363,6 +352,7 @@ section {
     padding: 15px;
     border-radius: 50px;
     grid-area: btnNews;
+    width: fit-content;
 }
 
 .btnNews a {
@@ -636,6 +626,73 @@ section {
     gap: 25px;
 }
      
+.newsCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #656661;
+    border-radius: 0.375rem;
+    width: 25vw; 
+    margin: 0 auto;
+    height: fit-content;
+}
+
+.newsCard a {
+    margin-bottom: 2rem;
+} 
+
+.textCard {
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #7b7c76;
+    border-bottom-left-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    grid-area: textoNoticias;
+}
+
+.textCard h3 {
+    font-size: 1.25rem;
+}
+
+.textCard p {
+    color: #e0e0e0;   
+}
+
+.textCard > * {
+    margin: 1rem 1rem;
+}
+
+.newsImg {
+    width: 100%;
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
+}
+
+.btnCard {
+    background-color: #fa8072;
+    margin: 30px;
+    padding: 15px;
+    border-radius: 50px;
+    grid-area: btnNews;
+    width: fit-content;
+}
+
+.btnCard a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+    color: #FDFFA9;
+    transition-duration: .25s;
+}
+
+.btnCard a:hover {
+    transition: 300ms;
+    transition-delay: 75ms;
+    color: #B3541E;
+}
 .card {
     position: static;
     background-color: #7b7c76;
@@ -1211,13 +1268,19 @@ section {
         grid-template-columns: 1fr;
     }
 
-    .news {
+    .newsCard {
         flex: 1 1 250px;
-        height: 50vh;
+        height: fit-content;
+        flex-wrap: wrap;
+        width: 50vw;
     }
 
-    .imgNews {
-        width: 70%;
+    .newsImg {
+        width: 100%;
+    }
+
+    .btnCard {
+        margin-left: 1rem;
     }
 
     /* meet the team */
@@ -1416,18 +1479,10 @@ section {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .card {
-        width: 21rem;
-    }
-
-    .news {
-        height: 50vh;
+    .newsCard {
         width: 35vw;
     }
 
-    .imgNews {
-        width: 75%;
-    }
 
     /* meet the team */
 
